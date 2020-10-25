@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Nikola Stojšin</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>""</projectUrl>
+    <iconUrl>""</iconUrl>
+    <description>WPF custom controls, commands and viewmodels.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>dvsku wpf</tags>
+  </metadata>
+</package>

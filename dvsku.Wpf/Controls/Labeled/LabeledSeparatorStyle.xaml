@@ -1,0 +1,22 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:dvsku.Controls">
+
+    <ControlTemplate x:Key="LabeledSeparatorTemplate" TargetType="{x:Type local:LabeledSeparator}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label x:Name="PART_Label" Grid.Row="0" Height="25"
+                Content="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:LabeledSeparator}}, Path=LabelText}"/>
+            <Separator x:Name="PART_Seperator" Grid.Row="1" />
+        </Grid>
+    </ControlTemplate>
+
+    <Style TargetType="{x:Type local:LabeledSeparator}">
+        <Setter Property="Template" Value="{StaticResource LabeledSeparatorTemplate}" />
+    </Style>
+</ResourceDictionary>
