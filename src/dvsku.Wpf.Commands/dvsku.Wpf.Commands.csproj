@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{36CA6EB5-7D7F-4AF4-9638-AD51EAF20394}</ProjectGuid>
+    <ProjectGuid>{C5AC3EEC-DC46-4FDE-B371-9008AF2D6265}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>dvsku.Wpf</RootNamespace>
-    <AssemblyName>dvsku.Wpf</AssemblyName>
+    <RootNamespace>dvsku.Wpf.Commands</RootNamespace>
+    <AssemblyName>dvsku.Wpf.Commands</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,25 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\BasicCommand.cs" />
+    <Compile Include="Commands\ParameterisedCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\dvsku.Wpf.Commands\dvsku.Wpf.Commands.csproj">
-      <Project>{c5ac3eec-dc46-4fde-b371-9008af2d6265}</Project>
-      <Name>dvsku.Wpf.Commands</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\dvsku.Wpf.Controls\dvsku.Wpf.Controls.csproj">
-      <Project>{be838d39-f0ce-4b2c-a8d6-84d035baa753}</Project>
-      <Name>dvsku.Wpf.Controls</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\dvsku.Wpf.Themes\dvsku.Wpf.Themes.csproj">
-      <Project>{ac35e797-db12-4be0-b290-9badce0be88e}</Project>
-      <Name>dvsku.Wpf.Themes</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\dvsku.Wpf.ViewModels\dvsku.Wpf.ViewModels.csproj">
-      <Project>{26310a84-9c1f-40f9-bae5-4d92b2c66e9c}</Project>
-      <Name>dvsku.Wpf.ViewModels</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

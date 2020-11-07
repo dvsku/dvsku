@@ -1,13 +1,8 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace dvsku.Controls {
-    [TemplatePart(Name = "LabelElement", Type = typeof(Label))]
-    [TemplatePart(Name = "SeparatorElement", Type = typeof(Separator))]
-    public class LabeledSeparator : Control {
-        public Label LabelElement { get; private set; }
-        public Separator SeparatorElement { get; private set; }
-
+namespace dvsku.Wpf.Controls {
+    public class LabeledSeparator : Separator {
         static LabeledSeparator() {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(LabeledSeparator), new FrameworkPropertyMetadata(typeof(LabeledSeparator)));
         }
@@ -22,8 +17,6 @@ namespace dvsku.Controls {
         }
 
         public override void OnApplyTemplate() {
-            LabelElement = GetTemplateChild("PART_Label") as Label;
-            SeparatorElement = GetTemplateChild("PART_Seperator") as Separator;
             base.OnApplyTemplate();
         }
     }

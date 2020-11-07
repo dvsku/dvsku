@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("dvsku.Wpf")]
+[assembly: AssemblyTitle("dvsku.Wpf.ViewModels")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("dvsku.Wpf")]
+[assembly: AssemblyProduct("dvsku.Wpf.ViewModels")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("36ca6eb5-7d7f-4af4-9638-ad51eaf20394")]
+[assembly: Guid("26310a84-9c1f-40f9-bae5-4d92b2c66e9c")]
 
 // Version information for an assembly consists of the following four values:
 //

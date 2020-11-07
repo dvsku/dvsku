@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:dvsku.Wpf.Controls">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Styles.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="{x:Type controls:LabeledSeparator}" BasedOn="{StaticResource LabeledSeparatorStyle}" />
+    <Style TargetType="{x:Type controls:LabeledComboBox}"  BasedOn="{StaticResource LabeledComboBoxStyle}" />
+    <Style TargetType="{x:Type controls:LabeledCheckBox}"  BasedOn="{StaticResource LabeledCheckBoxStyle}" />
+    <Style TargetType="{x:Type controls:LabeledTextBox}"   BasedOn="{StaticResource LabeledTextBoxStyle}" />
+</ResourceDictionary>

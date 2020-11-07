@@ -1,10 +1,12 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
-namespace dvsku.Controls {
+namespace dvsku.Wpf.Controls {
     [TemplatePart(Name = "LabelElement", Type = typeof(Label))]
     [TemplatePart(Name = "CheckBoxElement", Type = typeof(CheckBox))]
-    public class LabeledCheckBox : Control {
+    public class LabeledCheckBox : CheckBox {
         public enum LabelPosition { Left, Right }
 
         public Label LabelElement { get; private set; }
@@ -12,6 +14,8 @@ namespace dvsku.Controls {
 
         static LabeledCheckBox() {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(LabeledCheckBox), new FrameworkPropertyMetadata(typeof(LabeledCheckBox)));
+
+            
         }
 
         public static readonly DependencyProperty LabelTextProperty =
@@ -32,19 +36,17 @@ namespace dvsku.Controls {
             set => SetValue(LabelPositionProperty, value);
         }
 
-        public static readonly DependencyProperty IsCheckedProperty =
-            DependencyProperty.Register("IsChecked", typeof(bool), typeof(LabeledCheckBox),
-                new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
-
-        public bool IsChecked {
-            get => (bool)GetValue(IsCheckedProperty);
-            set => SetValue(IsCheckedProperty, value);
-        }
-
         public override void OnApplyTemplate() {
+            this.PreviewKeyDown += OnPreviewKeyDown;
             LabelElement = GetTemplateChild("PART_Label") as Label;
             CheckBoxElement = GetTemplateChild("PART_CheckBox") as CheckBox;
             base.OnApplyTemplate();
+        }
+
+        private void OnPreviewKeyDown(object sender, KeyEventArgs e) {
+            if (IsFocused && e.Key == Key.Enter) {
+                IsChecked = !IsChecked;
+            }
         }
     }
 }
