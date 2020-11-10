@@ -5,7 +5,7 @@
     <Style x:Key="LabeledCheckBoxStyle" TargetType="{x:Type controls:LabeledCheckBox}">
         <Setter Property="Background" Value="{DynamicResource LabeledCheckBox.Static.Background}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource LabeledCheckBox.Static.Border}"/>
-        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Foreground" Value="{DynamicResource LabeledCheckBox.Static.Foreground}"/>
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="BorderThickness" Value="1"/>
         <Style.Triggers>

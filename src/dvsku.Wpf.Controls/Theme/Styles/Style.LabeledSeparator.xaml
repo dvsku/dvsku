@@ -3,7 +3,8 @@
                     xmlns:controls="clr-namespace:dvsku.Wpf.Controls">
     
     <Style x:Key="LabeledSeparatorStyle" TargetType="{x:Type controls:LabeledSeparator}">
-        <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+        <Setter Property="Background" Value="{DynamicResource LabeledSeparator.Static.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource LabeledSeparator.Static.Foreground}"/>
         <Setter Property="Margin" Value="0,2,0,2"/>
         <Setter Property="Focusable" Value="false"/>
         <Setter Property="Template" Value="{DynamicResource LabeledSeparatorTemplate}" />

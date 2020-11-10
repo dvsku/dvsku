@@ -3,9 +3,9 @@
                     xmlns:controls="clr-namespace:dvsku.Wpf.Controls">
 
     <Style x:Key="LabeledTextBoxStyle" TargetType="{x:Type controls:LabeledTextBox}">
-        <Setter Property="Background" Value="#FFFFFFFF"/>
-        <Setter Property="BorderBrush" Value="#FFABADB3"/>
-        <Setter Property="Foreground" Value="#FF000000"/>
+        <Setter Property="Background" Value="{DynamicResource LabeledTextBox.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource LabeledTextBox.Static.Border}"/>
+        <Setter Property="Foreground" Value="{DynamicResource LabeledTextBox.Static.Foreground}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
