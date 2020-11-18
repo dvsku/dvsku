@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.ComponentModel;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -6,56 +7,73 @@ namespace dvsku.Wpf.Controls {
     [TemplatePart(Name = "PART_Label", Type = typeof(Border))]
     [TemplatePart(Name = "PART_TextBox", Type = typeof(Border))]
     public class LabeledTextBox : TextBox {
-        public enum LabelPosition { Top, Left }
+        public enum Placement { Top, Left }
 
-        public Label Label { get; private set; }
-        public TextBox TextBox { get; private set; }
+        private Border _label;
+        private Border _textBox;
 
         static LabeledTextBox() {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(LabeledTextBox), new FrameworkPropertyMetadata(typeof(LabeledTextBox)));
         }
 
-        public static readonly DependencyProperty LabelTextProperty =
-            DependencyProperty.Register("LabelText", typeof(string), typeof(LabeledTextBox),
-                new FrameworkPropertyMetadata(""));
+        #region LabelContent
+        public static readonly DependencyProperty LabelContentProperty =
+                DependencyProperty.Register("LabelContent", typeof(object), typeof(LabeledTextBox),
+                        new FrameworkPropertyMetadata(null));
 
-        public static readonly DependencyProperty LabelPositionProperty =
-            DependencyProperty.Register("Position", typeof(LabelPosition), typeof(LabeledTextBox),
-                new FrameworkPropertyMetadata(LabelPosition.Top, null));
+        public object LabelContent {
+            get => (object)GetValue(LabelContentProperty);
+            set => SetValue(LabelContentProperty, value);
+        }
+        #endregion
 
+        #region LabelContentTemplate
+        public static readonly DependencyProperty LabelContentTemplateProperty =
+                DependencyProperty.Register("LabelContentTemplate", typeof(DataTemplate), typeof(LabeledTextBox),
+                        new FrameworkPropertyMetadata(null));
+
+        [Bindable(true)]
+        public DataTemplate LabelContentTemplate {
+            get => (DataTemplate)GetValue(LabelContentTemplateProperty);
+            set => SetValue(LabelContentTemplateProperty, value);
+        }
+        #endregion
+
+        #region LabelPlacement
+        public static readonly DependencyProperty LabelPlacementProperty =
+            DependencyProperty.Register("LabelPlacement", typeof(Placement), typeof(LabeledTextBox),
+                new FrameworkPropertyMetadata(Placement.Top));
+
+        public Placement LabelPlacement {
+            get => (Placement)GetValue(LabelPlacementProperty);
+            set => SetValue(LabelPlacementProperty, value);
+        }
+        #endregion
+
+        #region TextBoxHeight
         public static readonly DependencyProperty TextBoxHeightProperty =
             DependencyProperty.Register("TextBoxHeight", typeof(double), typeof(LabeledTextBox),
                 new FrameworkPropertyMetadata(20.0));
-
-        public string LabelText {
-            get => (string)GetValue(LabelTextProperty);
-            set => SetValue(LabelTextProperty, value);
-        }
-
-        public LabelPosition Position {
-            get => (LabelPosition)GetValue(LabelPositionProperty);
-            set => SetValue(LabelPositionProperty, value);
-        }
 
         public double TextBoxHeight {
             get => (double)GetValue(TextBoxHeightProperty);
             set => SetValue(TextBoxHeightProperty, value);
         }
+        #endregion
 
         public override void OnApplyTemplate() {
             base.OnApplyTemplate();
 
-            Label = GetTemplateChild("PART_Label") as Label;
-            TextBox = GetTemplateChild("PART_TextBox") as TextBox;
+            _label = GetTemplateChild("PART_Label") as Border;
+            _textBox = GetTemplateChild("PART_TextBox") as Border;
 
-            if(Label != null) {
-                Label.PreviewMouseDown += OnLabelPreviewMouseDown;
-            }
+            if(_label != null) 
+                _label.PreviewMouseDown += OnLabelPreviewMouseDown;
         }
 
         private void OnLabelPreviewMouseDown(object sender, MouseButtonEventArgs e) {
-            if (TextBox == null) return;
-            TextBox.Focus();
+            if (_textBox != null)
+                _textBox.Focus();
         }
     }
 }

@@ -9,10 +9,10 @@
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="BorderThickness" Value="1"/>
         <Style.Triggers>
-            <Trigger Property="Position" Value="Left">
+            <Trigger Property="LabelPlacement" Value="Left">
                 <Setter Property="Template" Value="{DynamicResource LabeledCheckBoxLeftTemplate}"/>
             </Trigger>
-            <Trigger Property="Position" Value="Right">
+            <Trigger Property="LabelPlacement" Value="Right">
                 <Setter Property="Template" Value="{DynamicResource LabeledCheckBoxRightTemplate}"/>
             </Trigger>
         </Style.Triggers>

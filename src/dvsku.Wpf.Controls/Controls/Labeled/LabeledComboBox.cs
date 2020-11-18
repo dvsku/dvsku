@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.ComponentModel;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
@@ -8,10 +9,9 @@ namespace dvsku.Wpf.Controls {
     [TemplatePart(Name = "PART_ToggleButton", Type = typeof(ToggleButton))]
     [StyleTypedProperty(Property = "ItemContainerStyle", StyleTargetType = typeof(ComboBoxItem))]
     public class LabeledComboBox : ComboBox {
-        public enum LabelPosition { Top, Left }
-
-        public Border Label { get; private set; }
-        public ToggleButton ComboBox { get; private set; }
+        public enum Placement { Top, Left }
+        private Border _label;
+        private ToggleButton _comboBox;
 
         static LabeledComboBox() {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(LabeledComboBox), new FrameworkPropertyMetadata(typeof(LabeledComboBox)));
@@ -23,46 +23,64 @@ namespace dvsku.Wpf.Controls {
             KeyboardNavigation.DirectionalNavigationProperty.OverrideMetadata(typeof(LabeledComboBox), new FrameworkPropertyMetadata(KeyboardNavigationMode.None));
         }
 
-        public static readonly DependencyProperty LabelTextProperty =
-            DependencyProperty.Register("LabelText", typeof(string), typeof(LabeledComboBox),
-                new FrameworkPropertyMetadata(""));
+        #region LabelContent
+        public static readonly DependencyProperty LabelContentProperty =
+                DependencyProperty.Register("LabelContent", typeof(object), typeof(LabeledComboBox),
+                        new FrameworkPropertyMetadata(null));
 
-        public static readonly DependencyProperty LabelPositionProperty =
-            DependencyProperty.Register("Position", typeof(LabelPosition), typeof(LabeledComboBox),
-                new FrameworkPropertyMetadata(LabelPosition.Top, null));
+        public object LabelContent {
+            get => GetValue(LabelContentProperty);
+            set => SetValue(LabelContentProperty, value);
+        }
+        #endregion
 
+        #region LabelContentTemplate
+        public static readonly DependencyProperty LabelContentTemplateProperty =
+                DependencyProperty.Register("LabelContentTemplate", typeof(DataTemplate), typeof(LabeledComboBox),
+                        new FrameworkPropertyMetadata(null));
+
+        [Bindable(true)]
+        public DataTemplate LabelContentTemplate {
+            get => (DataTemplate)GetValue(LabelContentTemplateProperty);
+            set => SetValue(LabelContentTemplateProperty, value);
+        }
+        #endregion
+
+        #region LabelPlacement
+        public static readonly DependencyProperty LabelPlacementProperty =
+            DependencyProperty.Register("LabelPlacement", typeof(Placement), typeof(LabeledComboBox),
+                new FrameworkPropertyMetadata(Placement.Top));
+
+        public Placement LabelPlacement {
+            get => (Placement)GetValue(LabelPlacementProperty);
+            set => SetValue(LabelPlacementProperty, value);
+        }
+        #endregion
+
+        #region ComboBoxHeight
         public static readonly DependencyProperty ComboBoxHeightProperty =
             DependencyProperty.Register("ComboBoxHeight", typeof(double), typeof(LabeledComboBox),
                 new FrameworkPropertyMetadata(20.0));
-
-        public string LabelText {
-            get => (string)GetValue(LabelTextProperty);
-            set => SetValue(LabelTextProperty, value);
-        }
-
-        public LabelPosition Position {
-            get => (LabelPosition)GetValue(LabelPositionProperty);
-            set => SetValue(LabelPositionProperty, value);
-        }
 
         public double ComboBoxHeight {
             get => (double)GetValue(ComboBoxHeightProperty);
             set => SetValue(ComboBoxHeightProperty, value);
         }
+        #endregion
 
         public override void OnApplyTemplate() {
             base.OnApplyTemplate();
 
-            Label = GetTemplateChild("PART_Label") as Border;
-            ComboBox = GetTemplateChild("PART_ToggleButton") as ToggleButton;
+            _label = GetTemplateChild("PART_Label") as Border;
+            _comboBox = GetTemplateChild("PART_ToggleButton") as ToggleButton;
 
-            if (Label != null) {
-                Label.PreviewMouseDown += OnLabelPreviewMouseDown;
-            }
+            if (_label != null) 
+                _label.PreviewMouseDown += OnLabelPreviewMouseDown;
         }
 
         private void OnLabelPreviewMouseDown(object sender, MouseButtonEventArgs e) {
-            ComboBox.Focus();
+            if(_comboBox != null)
+                _comboBox.Focus();
         }
     }
 }

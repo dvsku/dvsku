@@ -1,52 +1,71 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace dvsku.Wpf.Controls {
-    [TemplatePart(Name = "LabelElement", Type = typeof(Label))]
-    [TemplatePart(Name = "CheckBoxElement", Type = typeof(CheckBox))]
     public class LabeledCheckBox : CheckBox {
-        public enum LabelPosition { Left, Right }
-
-        public Label LabelElement { get; private set; }
-        public CheckBox CheckBoxElement { get; private set; }
+        public enum Placement { Left, Right }
 
         static LabeledCheckBox() {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(LabeledCheckBox), new FrameworkPropertyMetadata(typeof(LabeledCheckBox)));
-
-            
         }
 
-        public static readonly DependencyProperty LabelTextProperty =
-            DependencyProperty.Register("LabelText", typeof(string), typeof(LabeledCheckBox),
-                new FrameworkPropertyMetadata(""));
+        #region LabelContent
+        public static readonly DependencyProperty LabelContentProperty =
+                DependencyProperty.Register("LabelContent", typeof(object), typeof(LabeledCheckBox),
+                        new FrameworkPropertyMetadata(null));
 
-        public static readonly DependencyProperty LabelPositionProperty =
-            DependencyProperty.Register("Position", typeof(LabelPosition), typeof(LabeledCheckBox),
-                new FrameworkPropertyMetadata(LabelPosition.Right));
-
-        public string LabelText {
-            get => (string)GetValue(LabelTextProperty);
-            set => SetValue(LabelTextProperty, value);
+        public object LabelContent {
+            get => GetValue(LabelContentProperty);
+            set => SetValue(LabelContentProperty, value);
         }
+        #endregion
 
-        public LabelPosition Position {
-            get => (LabelPosition)GetValue(LabelPositionProperty);
-            set => SetValue(LabelPositionProperty, value);
+        #region LabelContentTemplate
+        public static readonly DependencyProperty LabelContentTemplateProperty =
+                DependencyProperty.Register("LabelContentTemplate", typeof(DataTemplate), typeof(LabeledCheckBox),
+                        new FrameworkPropertyMetadata(null));
+
+        [Bindable(true)]
+        public DataTemplate LabelContentTemplate {
+            get => (DataTemplate)GetValue(LabelContentTemplateProperty);
+            set => SetValue(LabelContentTemplateProperty, value);
         }
+        #endregion
+
+        #region LabelPlacement
+        public static readonly DependencyProperty LabelPlacementProperty =
+            DependencyProperty.Register("LabelPlacement", typeof(Placement), typeof(LabeledCheckBox),
+                new FrameworkPropertyMetadata(Placement.Right));
+
+        public Placement LabelPlacement {
+            get => (Placement)GetValue(LabelPlacementProperty);
+            set => SetValue(LabelPlacementProperty, value);
+        }
+        #endregion
+
+        #region TextBoxHeight
+        public static readonly DependencyProperty TextBoxHeightProperty =
+            DependencyProperty.Register("TextBoxHeight", typeof(double), typeof(LabeledCheckBox),
+                new FrameworkPropertyMetadata(20.0));
+
+        public double TextBoxHeight {
+            get => (double)GetValue(TextBoxHeightProperty);
+            set => SetValue(TextBoxHeightProperty, value);
+        }
+        #endregion
 
         public override void OnApplyTemplate() {
-            this.PreviewKeyDown += OnPreviewKeyDown;
-            LabelElement = GetTemplateChild("PART_Label") as Label;
-            CheckBoxElement = GetTemplateChild("PART_CheckBox") as CheckBox;
             base.OnApplyTemplate();
+
+            PreviewKeyDown += OnPreviewKeyDown;
         }
 
         private void OnPreviewKeyDown(object sender, KeyEventArgs e) {
-            if (IsFocused && e.Key == Key.Enter) {
+            if (IsFocused && e.Key == Key.Enter)
                 IsChecked = !IsChecked;
-            }
         }
     }
 }

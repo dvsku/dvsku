@@ -9,15 +9,14 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <Border x:Name="PART_Label" 
-                    Grid.Column="0"
+            <Border Grid.Column="0"
                     BorderBrush="{TemplateBinding BorderBrush}" 
                     BorderThickness="0" 
                     Background="Transparent" 
                     Margin="0,0,3,0"
                     SnapsToDevicePixels="true">
-                <ContentPresenter x:Name="labelContent" 
-                                  Content="{TemplateBinding LabelText}" 
+                <ContentPresenter Content="{TemplateBinding LabelContent}" 
+                                  ContentTemplate="{TemplateBinding LabelContentTemplate}"
                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
                                   RecognizesAccessKey="True" 
                                   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 

@@ -19,7 +19,8 @@
                     Padding="0,0,5,0" 
                     SnapsToDevicePixels="true">
                 <ContentPresenter x:Name="labelContent" 
-                                  Content="{TemplateBinding LabelText}" 
+                                  Content="{TemplateBinding LabelContent}"
+                                  ContentTemplate="{TemplateBinding LabelContentTemplate}"
                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
                                   RecognizesAccessKey="True" 
                                   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 

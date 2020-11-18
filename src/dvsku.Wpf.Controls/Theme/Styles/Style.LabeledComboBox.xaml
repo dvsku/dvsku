@@ -15,10 +15,10 @@
         <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
         <Setter Property="ComboBoxHeight" Value="20" />
         <Style.Triggers>
-            <Trigger Property="Position" Value="Top">
+            <Trigger Property="LabelPlacement" Value="Top">
                 <Setter Property="Template" Value="{DynamicResource LabeledComboBoxTopTemplate}"/>
             </Trigger>
-            <Trigger Property="Position" Value="Left">
+            <Trigger Property="LabelPlacement" Value="Left">
                 <Setter Property="Template" Value="{DynamicResource LabeledComboBoxLeftTemplate}"/>
             </Trigger>
         </Style.Triggers>
