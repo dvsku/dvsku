@@ -101,6 +101,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Theme\Templates\Template.LabeledComboBoxItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Theme\Templates\Template.LabeledSeparator.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

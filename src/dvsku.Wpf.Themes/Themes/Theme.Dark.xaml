@@ -19,6 +19,12 @@
     <SolidColorBrush x:Key="LabeledComboBox.Popup.Static.Background" Color="#FF333337" />
     <SolidColorBrush x:Key="LabeledComboBox.Popup.Static.Border" Color="#FF434346" />
 
+    <!--    LabeledComboBoxItem    -->
+    <SolidColorBrush x:Key="LabeledComboBoxItem.Static.Background" Color="#1B1B1C"/>
+    <SolidColorBrush x:Key="LabeledComboBoxItem.Static.Border" Color="#1B1B1C"/>
+    <SolidColorBrush x:Key="LabeledComboBoxItem.MouseOver.Background" Color="#333334"/>
+    <SolidColorBrush x:Key="LabeledComboBoxItem.MouseOver.Border" Color="#333334"/>
+
     <!--    LabeledTextBox    -->
     <SolidColorBrush x:Key="LabeledTextBox.Static.Background" Color="#FF333337"/>
     <SolidColorBrush x:Key="LabeledTextBox.Static.Foreground" Color="#FFF1F1F1"/>

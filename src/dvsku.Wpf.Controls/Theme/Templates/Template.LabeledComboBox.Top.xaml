@@ -46,7 +46,7 @@
                             Background="{DynamicResource LabeledComboBox.Popup.Static.Background}">
                         <ScrollViewer>
                             <Grid RenderOptions.ClearTypeHint="Enabled">
-                                <ItemsPresenter KeyboardNavigation.DirectionalNavigation="Contained" 
+                                <ItemsPresenter KeyboardNavigation.DirectionalNavigation="Contained"
                                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                             </Grid>
                         </ScrollViewer>

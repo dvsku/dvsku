@@ -30,9 +30,7 @@
             <dvsku:LabeledCheckBox LabelContent="LABELEDCHECKBOX RIGHT" LabelPlacement="Right" Margin="5" />
 
             <dvsku:LabeledSeparator LabelContent="THEMES" Margin="5" />
-            <dvsku:LabeledComboBox LabelContent="LABELEDCOMBOBOX TOP" ItemsSource="{Binding Themes}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedTheme}" LabelPlacement="Left" Margin="5">
-
-            </dvsku:LabeledComboBox>
+            <dvsku:LabeledComboBox LabelContent="LABELEDCOMBOBOX TOP" ItemsSource="{Binding Themes}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedTheme}" LabelPlacement="Left" Margin="5"/>
         </StackPanel>
     </Grid>
 </Window>
