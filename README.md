@@ -1,16 +1,18 @@
-### Hi there 👋
+<div align="center">
+  <h1>dvsku.Wpf</h1>
+  <p>
+    A collection of WPF controls with themes.
+  </p>
+  <p>
+    Supporting .NET Framework 4.5+
+  </p>
+</div>
 
-<!--
-**dvsku/dvsku** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
+### Let's get started
+* [Quick Start](https://github.com/dvsku/dvsku.Wpf/wiki/Quick-Start)
+* [Themes](https://github.com/dvsku/dvsku.Wpf/wiki/Themes)
+* Examples
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### NuGet
+* [dvsku.Wpf](https://www.nuget.org/packages/dvsku.Wpf/)
