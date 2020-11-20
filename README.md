@@ -11,8 +11,9 @@
 
 ### Let's get started
 * [Quick Start](https://github.com/dvsku/dvsku.Wpf/wiki/Quick-Start)
+* [Controls](https://github.com/dvsku/dvsku.Wpf/wiki/Controls)
 * [Themes](https://github.com/dvsku/dvsku.Wpf/wiki/Themes)
-* Examples
+* [Examples](https://github.com/dvsku/dvsku.Wpf/wiki/Examples)
 
 ### NuGet
 * [dvsku.Wpf](https://www.nuget.org/packages/dvsku.Wpf/)
