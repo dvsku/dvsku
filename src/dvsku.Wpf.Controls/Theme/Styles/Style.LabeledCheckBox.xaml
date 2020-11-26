@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:dvsku.Wpf.Controls">
+
+    <Style x:Key="LabeledCheckBoxStyle" TargetType="{x:Type controls:LabeledCheckBox}">
+        <Setter Property="Background" Value="{DynamicResource LabeledCheckBox.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource LabeledCheckBox.Static.Border}"/>
+        <Setter Property="Foreground" Value="{DynamicResource LabeledCheckBox.Static.Foreground}"/>
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="BorderThickness" Value="1"/>
+        <Style.Triggers>
+            <Trigger Property="LabelPlacement" Value="Left">
+                <Setter Property="Template" Value="{DynamicResource LabeledCheckBoxLeftTemplate}"/>
+            </Trigger>
+            <Trigger Property="LabelPlacement" Value="Right">
+                <Setter Property="Template" Value="{DynamicResource LabeledCheckBoxRightTemplate}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,53 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--    LabeledComboBox    -->
+    <SolidColorBrush x:Key="LabeledComboBox.Static.Background" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="LabeledComboBox.Static.Foreground" Color="#FF000000" />
+    <SolidColorBrush x:Key="LabeledComboBox.Static.Border" Color="#FFCCCEDB" />
+    <SolidColorBrush x:Key="LabeledComboBox.Static.Glyph" Color="#1E1E1E"/>
+    <SolidColorBrush x:Key="LabeledComboBox.MouseOver.Background" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="LabeledComboBox.MouseOver.Border" Color="#FF1C97EA" />
+    <SolidColorBrush x:Key="LabeledComboBox.MouseOver.Glyph" Color="#1E1E1E"/>
+    <SolidColorBrush x:Key="LabeledComboBox.Pressed.Background" Color="#007ACC" />
+    <SolidColorBrush x:Key="LabeledComboBox.Pressed.Border" Color="#007ACC" />
+    <SolidColorBrush x:Key="LabeledComboBox.Pressed.Glyph" Color="#1E1E1E"/>
+    <SolidColorBrush x:Key="LabeledComboBox.Disabled.Background" Color="#656565"/>
+    <SolidColorBrush x:Key="LabeledComboBox.Disabled.Border" Color="#FF434346"/>
+    <SolidColorBrush x:Key="LabeledComboBox.Disabled.Glyph" Color="#333333"/>
+    <SolidColorBrush x:Key="LabeledComboBox.Label.Disabled.Text" Color="Gray" />
+    <SolidColorBrush x:Key="LabeledComboBox.Popup.Static.Background" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="LabeledComboBox.Popup.Static.Border" Color="#FFCCCEDB" />
+
+    <!--    LabeledComboBoxItem    -->
+    <SolidColorBrush x:Key="LabeledComboBoxItem.Static.Background" Color="#F6F6F6"/>
+    <SolidColorBrush x:Key="LabeledComboBoxItem.Static.Border" Color="#F6F6F6"/>
+    <SolidColorBrush x:Key="LabeledComboBoxItem.MouseOver.Background" Color="#C9DEF5"/>
+    <SolidColorBrush x:Key="LabeledComboBoxItem.MouseOver.Border" Color="#C9DEF5"/>
+
+    <!--    LabeledTextBox    -->
+    <SolidColorBrush x:Key="LabeledTextBox.Static.Background" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="LabeledTextBox.Static.Foreground" Color="#FF000000"/>
+    <SolidColorBrush x:Key="LabeledTextBox.Static.Border" Color="#CCCEDB"/>
+    <SolidColorBrush x:Key="LabeledTextBox.MouseOver.Border" Color="#FF1C97EA"/>
+    <SolidColorBrush x:Key="LabeledTextBox.Focus.Border" Color="#FF007ACC"/>
+
+    <!--    LabeledCheckBox    -->
+    <SolidColorBrush x:Key="LabeledCheckBox.Static.Background" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="LabeledCheckBox.Static.Foreground" Color="#FF000000"/>
+    <SolidColorBrush x:Key="LabeledCheckBox.Static.Border" Color="#FF707070"/>
+    <SolidColorBrush x:Key="LabeledCheckBox.Static.Glyph" Color="#FF212121"/>
+    <SolidColorBrush x:Key="LabeledCheckBox.MouseOver.Background" Color="#FFF3F9FF"/>
+    <SolidColorBrush x:Key="LabeledCheckBox.MouseOver.Border" Color="#FF1C97EA"/>
+    <SolidColorBrush x:Key="LabeledCheckBox.MouseOver.Glyph" Color="#FF212121"/>
+    <SolidColorBrush x:Key="LabeledCheckBox.Disabled.Background" Color="#FFE6E6E6"/>
+    <SolidColorBrush x:Key="LabeledCheckBox.Disabled.Border" Color="#FFBCBCBC"/>
+    <SolidColorBrush x:Key="LabeledCheckBox.Disabled.Glyph" Color="#FF707070"/>
+    <SolidColorBrush x:Key="LabeledCheckBox.Pressed.Background" Color="#FFD9ECFF"/>
+    <SolidColorBrush x:Key="LabeledCheckBox.Pressed.Border" Color="#FF007ACC"/>
+    <SolidColorBrush x:Key="LabeledCheckBox.Pressed.Glyph" Color="#FF212121"/>
+
+    <!--    LabeledSeparator    -->
+    <SolidColorBrush x:Key="LabeledSeparator.Static.Background" Color="#E0E3E6"/>
+    <SolidColorBrush x:Key="LabeledSeparator.Static.Foreground" Color="#FF000000"/>
+</ResourceDictionary>

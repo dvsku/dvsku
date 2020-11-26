@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Templates/Helpers/Template.LabeledComboBoxToggleButton.xaml"/>
+        
+        <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Templates/Template.LabeledSeparator.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Templates/Template.LabeledComboBox.Top.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Templates/Template.LabeledComboBox.Left.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Templates/Template.LabeledComboBoxItem.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Templates/Template.LabeledCheckBox.Left.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Templates/Template.LabeledCheckBox.Right.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Templates/Template.LabeledTextBox.Top.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Templates/Template.LabeledTextBox.Left.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

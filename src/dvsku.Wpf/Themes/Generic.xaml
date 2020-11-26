@@ -1,8 +1,0 @@
-<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/dvsku.Wpf;component/Controls/Labeled/LabeledTextBoxStyle.xaml" />
-        <ResourceDictionary Source="/dvsku.Wpf;component/Controls/Labeled/LabeledCheckBoxStyle.xaml" />
-        <ResourceDictionary Source="/dvsku.Wpf;component/Controls/Labeled/LabeledSeparatorStyle.xaml" />
-    </ResourceDictionary.MergedDictionaries>
-</ResourceDictionary>
