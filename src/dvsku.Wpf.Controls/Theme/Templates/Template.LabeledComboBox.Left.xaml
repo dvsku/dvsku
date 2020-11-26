@@ -33,7 +33,8 @@
                    IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" 
                    Margin="1" 
                    PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" 
-                   Placement="Bottom">
+                   Placement="Bottom"
+                   PlacementTarget="{Binding ElementName=PART_ToggleButton}">
                 <themes:SystemDropShadowChrome x:Name="shadow" 
                                                Color="Transparent" 
                                                MaxHeight="{TemplateBinding MaxDropDownHeight}" 

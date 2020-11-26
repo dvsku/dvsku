@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{657F554A-A970-44F3-B02A-8D46E6ECE60F}</ProjectGuid>
+    <ProjectGuid>{83925671-7C88-44A8-A64C-D79407C40228}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>dvsku.Wpf.Examples</RootNamespace>
     <AssemblyName>dvsku.Wpf.Examples</AssemblyName>
@@ -33,10 +33,61 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="dvsku.Wpf.Controls">
+      <HintPath>..\..\src\dvsku.Wpf.Controls\bin\Debug\dvsku.Wpf.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="dvsku.Wpf.Themes">
+      <HintPath>..\..\src\dvsku.Wpf.Controls\bin\Debug\dvsku.Wpf.Themes.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,7 +106,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -94,28 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\dvsku.Wpf.Commands\dvsku.Wpf.Commands.csproj">
-      <Project>{c5ac3eec-dc46-4fde-b371-9008af2d6265}</Project>
-      <Name>dvsku.Wpf.Commands</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\dvsku.Wpf.Controls\dvsku.Wpf.Controls.csproj">
-      <Project>{be838d39-f0ce-4b2c-a8d6-84d035baa753}</Project>
-      <Name>dvsku.Wpf.Controls</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\dvsku.Wpf.Themes\dvsku.Wpf.Themes.csproj">
-      <Project>{ac35e797-db12-4be0-b290-9badce0be88e}</Project>
-      <Name>dvsku.Wpf.Themes</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\dvsku.Wpf.ViewModels\dvsku.Wpf.ViewModels.csproj">
-      <Project>{26310a84-9c1f-40f9-bae5-4d92b2c66e9c}</Project>
-      <Name>dvsku.Wpf.ViewModels</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\dvsku.Wpf\dvsku.Wpf.csproj">
-      <Project>{36ca6eb5-7d7f-4af4-9638-ad51eaf20394}</Project>
-      <Name>dvsku.Wpf</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
