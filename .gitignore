@@ -9,8 +9,9 @@
 *.user
 *.userosscache
 *.sln.docstates
-*.nuspec
 *.bat
+
+src/dvsku.Wpf.Controls/dvsku.Wpf.Controls.nuspec
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
