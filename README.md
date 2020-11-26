@@ -1,7 +1,9 @@
 <div align="center">
   <h1>dvsku.Wpf</h1>
   <p>
-    <img src="https://github.com/dvsku/dvsku.Wpf/workflows/build/badge.svg"/>
+    <img src="https://img.shields.io/github/workflow/status/dvsku/dvsku.Wpf/build?color=%2331C653&logoColor=%23333A41&style=flat-square"/>
+    <img src="https://img.shields.io/nuget/dt/dvsku.Wpf?color=%2331C653&logoColor=%23333A41&style=flat-square"/>
+    <img src="https://img.shields.io/nuget/vpre/dvsku.Wpf?logoColor=%23333A41&style=flat-square"/>
   </p>
   <p>
     A collection of WPF controls with themes.
