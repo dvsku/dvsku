@@ -28,8 +28,7 @@
             </Border>
 
             <Popup x:Name="PART_Popup" 
-                   AllowsTransparency="true" 
-                   HorizontalOffset="{Binding ElementName=PART_Label, Path=ActualWidth}" 
+                   AllowsTransparency="true"
                    IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" 
                    Margin="1" 
                    PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" 

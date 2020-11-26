@@ -1,13 +1,35 @@
 ﻿<Window x:Class="dvsku.Wpf.Examples.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:dvsku.Wpf.Examples"
         xmlns:dvsku="http://dvsku.com/winfx/xaml/controls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Examples" Height="450" Width="800" Background="LightGray">
     <Grid>
-        <dvsku:LabeledComboBox LabelContent="aa"/>
+        <StackPanel Grid.IsSharedSizeScope="True">
+            <dvsku:LabeledSeparator LabelContent="TEXTBOXES" Margin="5" />
+            <dvsku:LabeledTextBox LabelContent="LABELEDTEXTBOX TOP" LabelPlacement="Top" Margin="5"/>
+            <dvsku:LabeledTextBox LabelContent="LABELEDTEXTBOX LEFT" LabelPlacement="Left" Margin="5"/>
+
+            <dvsku:LabeledSeparator LabelContent="COMBOBOXES" Margin="5" />
+            <dvsku:LabeledComboBox LabelContent="LABELEDCOMBOBOX TOP" LabelPlacement="Top" Margin="5">
+                <ComboBoxItem Content="ITEM 1" />
+                <ComboBoxItem Content="ITEM 2" />
+                <ComboBoxItem Content="ITEM 3" />
+            </dvsku:LabeledComboBox>
+            <dvsku:LabeledComboBox LabelContent="LABELEDCOMBOBOX LEFT" LabelPlacement="Left" Margin="5">
+                <ComboBoxItem Content="ITEM 1" />
+                <ComboBoxItem Content="ITEM 2" />
+                <ComboBoxItem Content="ITEM 3" />
+            </dvsku:LabeledComboBox>
+
+            <dvsku:LabeledSeparator LabelContent="CHECKBOXES" Margin="5" />
+            <dvsku:LabeledCheckBox LabelContent="LABELEDCHECKBOX LEFT" LabelPlacement="Left" Margin="5" />
+            <dvsku:LabeledCheckBox LabelContent="LABELEDCHECKBOX RIGHT" LabelPlacement="Right" Margin="5" />
+
+            <dvsku:LabeledSeparator LabelContent="THEMES" Margin="5" />
+            <dvsku:LabeledComboBox LabelContent="THEMES" ItemsSource="{Binding Themes}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedTheme}" LabelPlacement="Left" Margin="5"/>
+        </StackPanel>
     </Grid>
 </Window>
