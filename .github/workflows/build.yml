@@ -26,4 +26,4 @@ jobs:
         run: msbuild examples/dvsku.Wpf.Examples/dvsku.Wpf.Examples.sln
       
       - name: Build dvsku.Wpf
-        run: msbuild src/dvsku.sln
+        run: msbuild src/dvsku.Wpf.sln
