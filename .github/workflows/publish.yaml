@@ -1,0 +1,32 @@
+name: publish
+
+on:
+  workflow_dispatch:
+
+jobs:
+  work:
+    runs-on: windows-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.0.5
+        
+      - name: Restore NuGet Packages
+        run: nuget restore src/dvsku.Wpf.sln
+      
+      - name: Setup .nuspec file
+        run: copy nuget/dvsku.Wpf.Controls.nuspec src/dvsku.Wpf.Controls/dvsku.Wpf.Controls.nuspec
+
+      - name: Pack
+        run: nuget pack src/dvsku.Wpf.Controls/dvsku.Wpf.Controls.csproj -Build -Prop Configuration=Release
+      
+      - name: Set API key
+        run: nuget setApiKey ${{ secrets.NUGET_TOKEN }}
+      
+      - name: Publish
+        run: nuget push **/*.nupkg -Source https://api.nuget.org/v3/index.json
