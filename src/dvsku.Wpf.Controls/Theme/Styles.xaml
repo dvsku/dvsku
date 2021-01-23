@@ -4,5 +4,6 @@
         <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Styles/Style.LabeledComboBox.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Styles/Style.LabeledCheckBox.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Styles/Style.LabeledTextBox.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Styles/Style.LabeledPasswordBox.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

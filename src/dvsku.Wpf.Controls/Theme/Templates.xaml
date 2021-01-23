@@ -10,5 +10,7 @@
         <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Templates/Template.LabeledCheckBox.Right.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Templates/Template.LabeledTextBox.Top.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Templates/Template.LabeledTextBox.Left.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Templates/Template.LabeledPasswordBox.Top.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/dvsku.Wpf.Controls;component/Theme/Templates/Template.LabeledPasswordBox.Left.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

@@ -6,7 +6,8 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="{x:Type controls:LabeledSeparator}" BasedOn="{StaticResource LabeledSeparatorStyle}" />
-    <Style TargetType="{x:Type controls:LabeledComboBox}"  BasedOn="{StaticResource LabeledComboBoxStyle}" />
-    <Style TargetType="{x:Type controls:LabeledCheckBox}"  BasedOn="{StaticResource LabeledCheckBoxStyle}" />
-    <Style TargetType="{x:Type controls:LabeledTextBox}"   BasedOn="{StaticResource LabeledTextBoxStyle}" />
+    <Style TargetType="{x:Type controls:LabeledComboBox}" BasedOn="{StaticResource LabeledComboBoxStyle}" />
+    <Style TargetType="{x:Type controls:LabeledCheckBox}" BasedOn="{StaticResource LabeledCheckBoxStyle}" />
+    <Style TargetType="{x:Type controls:LabeledTextBox}" BasedOn="{StaticResource LabeledTextBoxStyle}" />
+    <Style TargetType="{x:Type controls:LabeledPasswordBox}" BasedOn="{StaticResource LabeledPasswordBoxStyle}" />
 </ResourceDictionary>
