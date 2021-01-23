@@ -58,4 +58,12 @@
     <!--    LabeledSeparator    -->
     <SolidColorBrush x:Key="LabeledSeparator.Static.Background" Color="#A0A0A0"/>
     <SolidColorBrush x:Key="LabeledSeparator.Static.Foreground" Color="#FF000000"/>
+
+    <!--    LabeledSeparator    -->
+    <FontFamily x:Key="LabeledPasswordBox.FontFamily">pack://application:,,,/Resources/Fonts/#password</FontFamily>
+    <SolidColorBrush x:Key="LabeledPasswordBox.Static.Background" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="LabeledPasswordBox.Static.Foreground" Color="#FF000000"/>
+    <SolidColorBrush x:Key="LabeledPasswordBox.Static.Border" Color="#FFABADB3"/>
+    <SolidColorBrush x:Key="LabeledPasswordBox.MouseOver.Border" Color="#FF7EB4EA"/>
+    <SolidColorBrush x:Key="LabeledPasswordBox.Focus.Border" Color="#FF569DE5"/>
 </ResourceDictionary>

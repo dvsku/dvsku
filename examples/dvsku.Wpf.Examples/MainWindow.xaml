@@ -7,29 +7,35 @@
         mc:Ignorable="d"
         Title="Examples" Height="450" Width="800" Background="LightGray">
     <Grid>
-        <StackPanel Grid.IsSharedSizeScope="True">
-            <dvsku:LabeledSeparator LabelContent="TEXTBOXES" Margin="5" />
-            <dvsku:LabeledTextBox LabelContent="LABELEDTEXTBOX TOP" LabelPlacement="Top" Margin="5"/>
-            <dvsku:LabeledTextBox LabelContent="LABELEDTEXTBOX LEFT" LabelPlacement="Left" Margin="5"/>
+        <ScrollViewer>
+            <StackPanel Grid.IsSharedSizeScope="True">
+                <dvsku:LabeledSeparator LabelContent="TEXTBOXES" Margin="5" />
+                <dvsku:LabeledTextBox LabelContent="LABELEDTEXTBOX TOP" LabelPlacement="Top" Margin="5"/>
+                <dvsku:LabeledTextBox LabelContent="LABELEDTEXTBOX LEFT" LabelPlacement="Left" Margin="5"/>
 
-            <dvsku:LabeledSeparator LabelContent="COMBOBOXES" Margin="5" />
-            <dvsku:LabeledComboBox LabelContent="LABELEDCOMBOBOX TOP" LabelPlacement="Top" Margin="5">
-                <ComboBoxItem Content="ITEM 1" />
-                <ComboBoxItem Content="ITEM 2" />
-                <ComboBoxItem Content="ITEM 3" />
-            </dvsku:LabeledComboBox>
-            <dvsku:LabeledComboBox LabelContent="LABELEDCOMBOBOX LEFT" LabelPlacement="Left" Margin="5">
-                <ComboBoxItem Content="ITEM 1" />
-                <ComboBoxItem Content="ITEM 2" />
-                <ComboBoxItem Content="ITEM 3" />
-            </dvsku:LabeledComboBox>
+                <dvsku:LabeledSeparator LabelContent="COMBOBOXES" Margin="5" />
+                <dvsku:LabeledComboBox LabelContent="LABELEDCOMBOBOX TOP" LabelPlacement="Top" Margin="5">
+                    <ComboBoxItem Content="ITEM 1" />
+                    <ComboBoxItem Content="ITEM 2" />
+                    <ComboBoxItem Content="ITEM 3" />
+                </dvsku:LabeledComboBox>
+                <dvsku:LabeledComboBox LabelContent="LABELEDCOMBOBOX LEFT" LabelPlacement="Left" Margin="5">
+                    <ComboBoxItem Content="ITEM 1" />
+                    <ComboBoxItem Content="ITEM 2" />
+                    <ComboBoxItem Content="ITEM 3" />
+                </dvsku:LabeledComboBox>
 
-            <dvsku:LabeledSeparator LabelContent="CHECKBOXES" Margin="5" />
-            <dvsku:LabeledCheckBox LabelContent="LABELEDCHECKBOX LEFT" LabelPlacement="Left" Margin="5" />
-            <dvsku:LabeledCheckBox LabelContent="LABELEDCHECKBOX RIGHT" LabelPlacement="Right" Margin="5" />
+                <dvsku:LabeledSeparator LabelContent="CHECKBOXES" Margin="5" />
+                <dvsku:LabeledCheckBox LabelContent="LABELEDCHECKBOX LEFT" LabelPlacement="Left" Margin="5" />
+                <dvsku:LabeledCheckBox LabelContent="LABELEDCHECKBOX RIGHT" LabelPlacement="Right" Margin="5" />
 
-            <dvsku:LabeledSeparator LabelContent="THEMES" Margin="5" />
-            <dvsku:LabeledComboBox LabelContent="THEMES" ItemsSource="{Binding Themes}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedTheme}" LabelPlacement="Left" Margin="5"/>
-        </StackPanel>
+                <dvsku:LabeledSeparator LabelContent="PASSWORDBOXES" Margin="5" />
+                <dvsku:LabeledPasswordBox LabelContent="LABELEDPASSWORDBOX TOP" Text="sdfg" LabelPlacement="Top" Margin="5" />
+                <dvsku:LabeledPasswordBox LabelContent="LABELEDPASSWORDBOX LEFT" Text="sdfg" LabelPlacement="Left" Margin="5" />
+
+                <dvsku:LabeledSeparator LabelContent="THEMES" Margin="5" />
+                <dvsku:LabeledComboBox LabelContent="THEMES" ItemsSource="{Binding Themes}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedTheme}" LabelPlacement="Left" Margin="5"/>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>

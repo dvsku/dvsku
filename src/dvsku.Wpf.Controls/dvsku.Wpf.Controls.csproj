@@ -56,6 +56,7 @@
     <Compile Include="Controls\Labeled\LabeledCheckBox.cs" />
     <Compile Include="Controls\Labeled\LabeledComboBox.cs" />
     <Compile Include="Controls\Labeled\LabeledSeparator.cs" />
+    <Compile Include="Controls\Labeled\LabeledPasswordBox.cs" />
     <Compile Include="Controls\Labeled\LabeledTextBox.cs" />
     <Page Include="Theme\Styles.xaml">
       <SubType>Designer</SubType>
@@ -72,6 +73,10 @@
     <Page Include="Theme\Styles\Style.LabeledSeparator.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\Styles\Style.LabeledPasswordBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Theme\Styles\Style.LabeledTextBox.xaml">
       <SubType>Designer</SubType>
@@ -109,9 +114,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Theme\Templates\Template.LabeledPasswordBox.Left.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Theme\Templates\Template.LabeledTextBox.Left.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\Templates\Template.LabeledPasswordBox.Top.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Theme\Templates\Template.LabeledTextBox.Top.xaml">
       <SubType>Designer</SubType>

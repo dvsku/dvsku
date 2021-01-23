@@ -45,9 +45,6 @@
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="BorderBrush" TargetName="PART_TextBox" Value="{DynamicResource LabeledTextBox.MouseOver.Border}"/>
             </Trigger>
-            <Trigger Property="IsMouseOver" SourceName="PART_Label" Value="true">
-                <Setter Property="Cursor" Value="Hand" />
-            </Trigger>
             <Trigger Property="IsKeyboardFocused" Value="true">
                 <Setter Property="BorderBrush" TargetName="PART_TextBox" Value="{DynamicResource LabeledTextBox.Focus.Border}"/>
             </Trigger>
