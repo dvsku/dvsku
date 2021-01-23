@@ -29,5 +29,6 @@
 * [dvsku.Wpf](https://www.nuget.org/packages/dvsku.Wpf/)
 
 ### Change Log
+* v0.2.1-alpha - Added LabeledPasswordBox
 * v0.2.0-alpha - Decreased scope of project, restructured, reworked controls. Breaking change from previous version.
 * v0.1.0 - Initial release
